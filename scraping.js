@@ -13,21 +13,21 @@ forEach(types, function(item) {
     if(!err && res.statusCode === 200) {
       scrapeData(res, item, baseurl);
     }
-  }); 
-})
+  });
+});
 
 function scrapeData(res, folderName, getUrl) {
   var $ = cheerio.load(res.body);
   var links = $('.product-row a');
   for(var i = 0, len = links.length; i < len; i++) {
     var cleanLink = links[i].attribs.href.split('/');
-    var getFileName = cleanLink[cleanLink.length-1];
+    var getFileName = cleanLink[cleanLink.length - 1];
     // strip query parameters
     var removedQuestionMarks = getFileName.split('?');
     var cleanedLink = removedQuestionMarks[0].replace('.csp', '.pdf');
     if(!fs.existsSync("files/" + folderName)) {
       fs.mkdirSync("files/" + folderName);
-    };
+    }
     request(getUrl + 'files/' + cleanedLink).pipe(fs.createWriteStream('files/' + folderName + '/' + cleanedLink));
   }
 }

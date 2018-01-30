@@ -6,4 +6,4 @@ Really simple books scraper for oreilly's free books written in 2 minutes.
 * `git clone https://github.com/RigaNik/books-scraper.git`
 * `cd books-scraper`
 * `npm install`
-* `node scraping.js`
+* `npm run scrape`
