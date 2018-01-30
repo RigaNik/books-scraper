@@ -1,0 +1,25 @@
+{
+  "name": "scrape-books",
+  "version": "1.0.0",
+  "description": "Just a simple books scraper",
+  "main": "scraping.js",
+  "dependencies": {},
+  "devDependencies": {
+    "async-foreach": "^0.1.3",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.83.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RigaNik/books-scraper.git"
+  },
+  "author": "Nikola Stekovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RigaNik/books-scraper/issues"
+  },
+  "homepage": "https://github.com/RigaNik/books-scraper#readme"
+}
